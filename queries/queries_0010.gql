@@ -1,5 +1,5 @@
 query GET_POST {
-  post(id: "860") {
+  post(id: "8600") {
     __typename
 
     ... on Post {
@@ -7,9 +7,17 @@ query GET_POST {
       title
     }
 
-    ... on PostNotFoundError {
+    ... on PostError {
       statusCode
       message
+
+      ... on PostNotFoundError {
+        postId
+      }
+
+      ... on PostTimeoutError {
+        timeout
+      }
     }
   }
 }
