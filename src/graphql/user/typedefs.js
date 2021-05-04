@@ -2,7 +2,7 @@ import { gql } from 'apollo-server-core';
 
 export const userTypeDefs = gql`
   extend type Query {
-    user: User!
+    user(id: ID!): User!
     users: [User!]!
   }
 
