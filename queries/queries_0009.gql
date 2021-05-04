@@ -1,0 +1,22 @@
+# QUERY VARIABLES
+# {
+#   "limit": 1,
+#   "order": "DESC"
+# }
+query GET_USERS(
+  $sort: String = "indexRef"
+  $order: ApiFilterOrder = DESC
+  $start: Int = 0
+  $limit: Int = 5
+) {
+  users(
+    input: { _sort: $sort, _order: $order, _start: $start, _limit: $limit }
+  ) {
+    id
+    firstName
+    lastName
+    userName
+    indexRef
+    createdAt
+  }
+}
