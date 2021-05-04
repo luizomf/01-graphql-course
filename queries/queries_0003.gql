@@ -1,0 +1,10 @@
+query GET_USERS {
+  user(id: "812") {
+    id
+    firstName
+    lastName
+    userName
+    indexRef
+    createdAt
+  }
+}
