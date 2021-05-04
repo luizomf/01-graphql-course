@@ -1,0 +1,11 @@
+query GET_POST {
+  post342: post(id: "342") {
+    postId: id
+    id
+    title
+  }
+  post860: post(id: "860") {
+    id
+    postTitle: title
+  }
+}
