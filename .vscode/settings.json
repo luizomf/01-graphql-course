@@ -1,3 +1,6 @@
 {
-  "window.zoomLevel": 3
+  "window.zoomLevel": 0,
+  "code-runner.executorMap": {
+    "javascript": "node -r dotenv/config -r sucrase/register"
+  }
 }
