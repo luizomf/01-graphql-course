@@ -8,8 +8,8 @@ const posts = async (_, { input }, { dataSources }) => {
   return posts;
 };
 
-const user = async ({ userId }, _, { userDataLoader }) => {
-  return userDataLoader.load(userId);
+const user = async ({ userId }, _, { dataSources }) => {
+  return dataSources.userApi.batchLoadById(userId);
 };
 
 export const postResolvers = {
