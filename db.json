@@ -159,6 +159,14 @@
       "userName": "marcia_carvalho81",
       "indexRef": 1,
       "createdAt": "2016-12-08T00:49:39.870Z"
+    },
+    {
+      "firstName": "João",
+      "lastName": "Miranda",
+      "userName": "joao-miranda",
+      "indexRef": 21,
+      "createdAt": "2021-05-08T22:49:18.055Z",
+      "id": "cHmRLCX"
     }
   ],
   "posts": [
