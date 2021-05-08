@@ -1,0 +1,70 @@
+mutation CREATE_POST {
+  createPost(data: { title: "O título", body: "O conteúdo", userId: "592" }) {
+    id
+    title
+    body
+    user {
+      firstName
+    }
+    indexRef
+    createdAt
+  }
+}
+
+mutation UPDATE_POST {
+  updatePost(postId: "3vgV_ff", data: { title: "UPDATED - O título" }) {
+    id
+    title
+    body
+    user {
+      firstName
+    }
+    indexRef
+    createdAt
+  }
+}
+
+mutation DELETE_POST {
+  deletePost(postId: "3vgV_ff")
+}
+
+mutation CREATE_USER {
+  createUser(
+    data: { firstName: "João", lastName: "Miranda", userName: "joao-miranda1" }
+  ) {
+    id
+    firstName
+    lastName
+    userName
+    indexRef
+    createdAt
+    posts {
+      id
+    }
+  }
+}
+
+mutation UPDATE_USER {
+  updateUser(
+    userId: "VhsZF-7"
+    data: {
+      firstName: "NOVOFIRST"
+      lastName: "Novo last"
+      userName: "new.user-name"
+    }
+  ) {
+    id
+    firstName
+    lastName
+    userName
+    indexRef
+    createdAt
+    posts {
+      id
+    }
+  }
+}
+
+mutation DELETE_USER {
+  deleteUser(userId: "VhsZF-7")
+}
