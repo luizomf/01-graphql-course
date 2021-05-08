@@ -11,6 +11,35 @@ export const createPostFn = async (postData, dataSource) => {
   return await dataSource.post('', { ...postInfo });
 };
 
+export const updatePostFn = async (postId, postData, dataSource) => {
+  if (!postId) {
+    throw new ValidationError('Missing postId');
+  }
+
+  const { title, body, userId } = postData;
+
+  if (typeof title !== 'undefined') {
+    if (!title) {
+      throw new ValidationError('title missing');
+    }
+  }
+
+  if (typeof body !== 'undefined') {
+    if (!body) {
+      throw new ValidationError('body missing');
+    }
+  }
+
+  if (typeof userId !== 'undefined') {
+    if (!userId) {
+      throw new ValidationError('userId missing');
+    }
+    await userExists(userId, dataSource);
+  }
+
+  return dataSource.patch(postId, { ...postData });
+};
+
 const userExists = async (userId, dataSource) => {
   try {
     await dataSource.context.dataSources.userApi.get(userId);
