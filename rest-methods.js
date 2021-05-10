@@ -101,5 +101,3 @@ const del = (endPoint, body, requestInit = {}) => {
   const user = await userResponse.json();
   console.log(user);
 })();
-
-console.log(`This is a testing commit, it'll revert it in secons`);
