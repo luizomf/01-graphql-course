@@ -18,10 +18,12 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.13.0",
     "apollo-server": "2.23.0",
+    "bcrypt": "^5.0.1",
     "dataloader": "^2.0.0",
     "dotenv": "^8.5.1",
     "graphql": "15.5.0",
     "json-server": "^0.16.3",
+    "jsonwebtoken": "^8.5.1",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
