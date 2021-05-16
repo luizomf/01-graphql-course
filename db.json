@@ -161,12 +161,22 @@
       "createdAt": "2016-12-08T00:49:39.870Z"
     },
     {
-      "firstName": "João",
+      "firstName": "Joãozinho",
       "lastName": "Miranda",
       "userName": "joao-miranda",
+      "passwordHash": "$2b$12$g7MOqHcxPAZwmq3CRsuyQORiNqMaT.dYNhZApg2Hg0mO9T1d2Hzly",
       "indexRef": 21,
-      "createdAt": "2021-05-08T22:49:18.055Z",
-      "id": "cHmRLCX"
+      "createdAt": "2021-05-16T21:51:22.435Z",
+      "id": "AV7ogHd"
+    },
+    {
+      "firstName": "Luiz",
+      "lastName": "Otávio",
+      "userName": "luizotavio",
+      "passwordHash": "$2b$12$pcJwWoqIecryfXL9jsZNNOnL4ZKej3R5E.18m/xprCgXD3G8poNVm",
+      "indexRef": 22,
+      "createdAt": "2021-05-16T21:53:11.849Z",
+      "id": "xDZo0bA"
     }
   ],
   "posts": [
