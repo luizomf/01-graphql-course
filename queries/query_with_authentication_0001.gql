@@ -1,0 +1,9 @@
+# HEADERS
+# {
+#   "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ4RFpvMGJBIiwiaWF0IjoxNjIxMjQzOTE0LCJleHAiOjE2MjE4NDg3MTR9.RFZW4gwZE32TaRp3MX64bCUke7kJI_kmUnHwcs7ZynE"
+# }
+query GET_POSTS {
+  posts {
+    id
+  }
+}
