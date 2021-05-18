@@ -173,10 +173,19 @@
       "firstName": "Luiz",
       "lastName": "Otávio",
       "userName": "luizotavio",
-      "passwordHash": "$2b$12$pcJwWoqIecryfXL9jsZNNOnL4ZKej3R5E.18m/xprCgXD3G8poNVm",
+      "passwordHash": "$2b$12$Cc89csQ.kiN85H4AYuYvZOO6OLzp7noGZT9e4oQ1zXPC.d18az11q",
       "indexRef": 22,
       "createdAt": "2021-05-16T21:53:11.849Z",
       "id": "xDZo0bA"
+    },
+    {
+      "firstName": "Joana",
+      "lastName": "O.",
+      "userName": "joana",
+      "passwordHash": "$2b$12$UsJ6RztVaO1dThtip7gUTutZA8eJC1mWY0Nz8Mw/lFSa92BQeNT.a",
+      "indexRef": 23,
+      "createdAt": "2021-05-18T22:31:17.850Z",
+      "id": "Tl70cwS"
     }
   ],
   "posts": [
