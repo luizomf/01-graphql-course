@@ -3,6 +3,7 @@ import { gql } from 'apollo-server-core';
 export const loginTypedefs = gql`
   extend type Mutation {
     login(data: LoginInput!): Login!
+    logout(userName: String!): Boolean!
   }
 
   input LoginInput {
