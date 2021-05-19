@@ -16,7 +16,7 @@ const authorizeUser = async (req) => {
     if (foundUser.token !== token) return '';
     return userId;
   } catch (e) {
-    console.log(e);
+    // console.log(e);
     return '';
   }
 };
