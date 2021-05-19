@@ -24,7 +24,7 @@ export const postTypeDefs = gql`
   input CreatePostInput {
     title: String!
     body: String!
-    userId: String!
+    # userId: String!
   }
 
   input UpdatePostInput {
