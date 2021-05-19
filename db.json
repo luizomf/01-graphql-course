@@ -176,7 +176,8 @@
       "passwordHash": "$2b$12$Cc89csQ.kiN85H4AYuYvZOO6OLzp7noGZT9e4oQ1zXPC.d18az11q",
       "indexRef": 22,
       "createdAt": "2021-05-16T21:53:11.849Z",
-      "id": "xDZo0bA"
+      "id": "xDZo0bA",
+      "token": ""
     },
     {
       "firstName": "Joana",
