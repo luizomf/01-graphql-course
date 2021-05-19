@@ -12,11 +12,7 @@ export const createPostFn = async (postData, dataSource) => {
   return await dataSource.post('', { ...postInfo });
 };
 
-export const updatePostFn = async (postId, postData, dataSource) => {
-  if (!postId) {
-    throw new ValidationError('Missing postId');
-  }
-
+export const findPostOwner = async (postId, dataSource) => {
   const foundPost = await dataSource.get(postId, undefined, {
     cacheOptions: { ttl: 0 },
   });
@@ -29,7 +25,15 @@ export const updatePostFn = async (postId, postData, dataSource) => {
     throw new AuthenticationError('You cannot upate this post 😠!');
   }
 
-  const { userId } = foundPost;
+  return foundPost;
+};
+
+export const updatePostFn = async (postId, postData, dataSource) => {
+  if (!postId) {
+    throw new ValidationError('Missing postId');
+  }
+
+  const { userId } = await findPostOwner(postId, dataSource);
   const { title, body } = postData;
 
   if (typeof title !== 'undefined') {
@@ -56,6 +60,7 @@ export const updatePostFn = async (postId, postData, dataSource) => {
 
 export const deletePostFn = async (postId, dataSource) => {
   if (!postId) throw new ValidationError('Missing postId');
+  await findPostOwner(postId, dataSource);
 
   const deleted = await dataSource.delete(postId);
   return !!deleted;
