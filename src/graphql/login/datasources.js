@@ -60,6 +60,7 @@ export class LoginApi extends RESTDataSource {
     }
 
     await this.patch(user[0].id, { token: '' }, { cacheOptions: { ttl: 0 } });
+    this.context.res.clearCookie('jwtToken');
     return true;
   }
 
