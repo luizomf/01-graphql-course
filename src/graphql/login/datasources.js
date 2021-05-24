@@ -43,7 +43,7 @@ export class LoginApi extends RESTDataSource {
       httpOnly: true, // Não deve ser acessado via código
       maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
       path: '/',
-      sameSite: 'strict', // strict lax none
+      sameSite: 'none', // strict lax none
     });
 
     return {

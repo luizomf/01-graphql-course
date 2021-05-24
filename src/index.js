@@ -20,6 +20,10 @@ const server = new ApolloServer({
     };
   },
   uploads: false,
+  cors: {
+    origin: ['https://cdpn.io'],
+    credentials: true,
+  },
 });
 
 server.listen(4003).then(({ url }) => {
