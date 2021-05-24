@@ -19,6 +19,7 @@ const server = new ApolloServer({
       loginApi: new LoginApi(),
     };
   },
+  uploads: false,
 });
 
 server.listen(4003).then(({ url }) => {
