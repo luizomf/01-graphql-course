@@ -12,7 +12,7 @@ import jwt from 'jsonwebtoken';
     passwordHash,
   );
 
-  console.log(passwordIsValid);
+  // console.log(passwordIsValid);
 })();
 
 (async () => {
