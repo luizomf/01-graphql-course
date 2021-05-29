@@ -177,7 +177,7 @@
       "indexRef": 22,
       "createdAt": "2021-05-16T21:53:11.849Z",
       "id": "xDZo0bA",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ4RFpvMGJBIiwiaWF0IjoxNjIyMzExMjM0LCJleHAiOjE2MjI5MTYwMzR9.aEaATKDIP6s4zYYJiP26lrFE8ndyaJU4wG4mkrgkk1c"
+      "token": ""
     },
     {
       "firstName": "Joana",
@@ -187,7 +187,7 @@
       "indexRef": 23,
       "createdAt": "2021-05-19T10:20:13.062Z",
       "id": "ASPURjd",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBU1BVUmpkIiwiaWF0IjoxNjIxNDMxNjQwLCJleHAiOjE2MjIwMzY0NDB9.LSwoj80N9kGmR1yQ-DWPvgZmA8OANh2oU0db6P6U_a8"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJBU1BVUmpkIiwiaWF0IjoxNjIyMzE2MjUyLCJleHAiOjE2MjI5MjEwNTJ9.tc27duFdsIQZswn_DgAtZm_wOHRsFV7keIUx_WPBIJA"
     }
   ],
   "posts": [
