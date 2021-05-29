@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { UsersApi } from './user/datasources';
+import { UsersApi } from '../schema/user/datasources';
 
 const verifyJwtToken = async (token) => {
   try {
