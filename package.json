@@ -16,8 +16,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-datasource": "^0.9.0",
     "apollo-datasource-rest": "^0.13.0",
     "apollo-server": "2.23.0",
+    "apollo-server-caching": "^0.7.0",
     "bcrypt": "^5.0.1",
     "dataloader": "^2.0.0",
     "dotenv": "^8.5.1",
