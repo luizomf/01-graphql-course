@@ -17,6 +17,7 @@ export const postTypeDefs = gql`
     title: String!
     body: String!
     user: User!
+    comments: [Comment!]!
     indexRef: Int!
     createdAt: String!
   }
@@ -24,12 +25,10 @@ export const postTypeDefs = gql`
   input CreatePostInput {
     title: String!
     body: String!
-    # userId: String!
   }
 
   input UpdatePostInput {
     title: String
     body: String
-    # userId: String
   }
 `;
