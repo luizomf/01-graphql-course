@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e 'js' -r dotenv/config -r sucrase/register src/index.js",
-    "server": "json-server --watch db.json"
+    "server": "json-server --watch db.json",
+    "build": "rimraf ./dist && sucrase ./src -d ./dist --transforms imports",
+    "start": "npm run server & node -r dotenv/config dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,8 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.6",
     "mysql": "^2.18.1",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "eslint": "^7.25.0",
