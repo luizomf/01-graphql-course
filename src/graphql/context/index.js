@@ -18,6 +18,8 @@ const verifyJwtToken = async (token) => {
 };
 
 const authorizeUserWithBearerToken = async (req) => {
+  if (!req || !req.headers || !req.headers.authorization) return '';
+
   const { headers } = req;
   const { authorization } = headers;
 
@@ -51,14 +53,17 @@ const cookieParser = (cookiesHeader) => {
   return JSON.parse(JSON.stringify(parsedCookie));
 };
 
-export const context = async ({ req, res }) => {
-  let loggedUserId = await authorizeUserWithBearerToken(req);
-
-  // console.log(req.headers.cookie);
+export const context = async ({ req, res, connection }) => {
+  const reqOrConnection = req || connection?.context?.req;
+  let loggedUserId = await authorizeUserWithBearerToken(reqOrConnection);
 
   if (!loggedUserId) {
-    if (req.headers.cookie) {
-      const { jwtToken } = cookieParser(req.headers.cookie);
+    if (
+      reqOrConnection &&
+      reqOrConnection.headers &&
+      reqOrConnection.headers.cookie
+    ) {
+      const { jwtToken } = cookieParser(reqOrConnection.headers.cookie);
       loggedUserId = await verifyJwtToken(jwtToken);
     }
   }

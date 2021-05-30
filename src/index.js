@@ -29,6 +29,13 @@ const server = new ApolloServer({
     origin: ['https://cdpn.io'],
     credentials: true,
   },
+  subscriptions: {
+    onConnect: (connectionParams, ws, _context) => {
+      return {
+        req: ws.upgradeReq,
+      };
+    },
+  },
 });
 
 server.listen(4003).then(({ url }) => {

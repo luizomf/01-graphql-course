@@ -6,7 +6,7 @@ export const commentTypedefs = gql`
   }
 
   extend type Subscription {
-    createdComment: Comment!
+    createdComment(test: String): Comment!
   }
 
   type Comment {
