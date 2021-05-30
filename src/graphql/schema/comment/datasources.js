@@ -27,7 +27,7 @@ export class CommentSQLDataSource extends SQLDatasource {
     return comments.map((comment) => commentReducer(comment));
   }
 
-  async create({ userId, postId, comment }) {
+  async create({ userId, postId, comment, postOwner = null }) {
     const partialComment = {
       user_id: userId,
       post_id: postId,
@@ -48,6 +48,7 @@ export class CommentSQLDataSource extends SQLDatasource {
 
     pubSub.publish(CREATED_COMMENT_TRIGGER, {
       createdComment: commentToReturn,
+      postOwner,
     });
 
     return commentToReturn;
