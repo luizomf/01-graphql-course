@@ -35,6 +35,8 @@ const server = new ApolloServer({
         req: ws.upgradeReq,
       };
     },
+    path: '/',
+    keepAlive: 5000,
   },
 });
 
