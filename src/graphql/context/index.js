@@ -68,8 +68,19 @@ export const context = async ({ req, res, connection }) => {
     }
   }
 
-  return {
+  const theContext = {
     loggedUserId,
     res,
   };
+
+  if (connection) {
+    const userApi = new UsersApi();
+    userApi.initialize({});
+
+    theContext.dataSources = {
+      userApi,
+    };
+  }
+
+  return theContext;
 };
