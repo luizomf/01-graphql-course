@@ -1,6 +1,8 @@
 {
   "window.zoomLevel": 2,
   "code-runner.executorMap": {
-    "javascript": "node -r dotenv/config -r sucrase/register"
-  }
+    "javascript": "node -r dotenv/config -r sucrase/register",
+    "python": "clear && venv/bin/python"
+  },
+  "python.pythonPath": "venv/bin/python"
 }

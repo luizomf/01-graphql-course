@@ -1,4 +1,7 @@
 build
+venv
+_example.py
+.mypy_cache
 
 # Logs
 logs
