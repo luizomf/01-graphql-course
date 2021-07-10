@@ -42,7 +42,7 @@ export class CommentSQLDataSource extends SQLDatasource {
     const created = await this.db(this.tableName).insert(partialComment);
     const commentToReturn = {
       id: created[0],
-      createAt: new Date().toISOString(),
+      createdAt: new Date().toISOString(), // Fixed typo
       ...partialComment,
     };
 
