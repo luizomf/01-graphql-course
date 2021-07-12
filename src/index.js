@@ -26,7 +26,7 @@ const server = new ApolloServer({
   },
   uploads: false,
   cors: {
-    origin: ['https://cdpn.io'],
+    origin: ['https://cdpn.io', 'http://localhost:3000'],
     credentials: true,
   },
   subscriptions: {
