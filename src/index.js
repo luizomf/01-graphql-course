@@ -26,7 +26,7 @@ const server = new ApolloServer({
   },
   uploads: false,
   cors: {
-    origin: ['https://cdpn.io', 'http://localhost:3000'],
+    origin: ['https://focused-bartik-8938e3.netlify.app'],
     credentials: true,
   },
   subscriptions: {
